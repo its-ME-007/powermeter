@@ -102,7 +102,7 @@ async def get():
         <body>
             <h1>Power: <span id="power-value">Loading...</span></h1>
             <script>
-                const ws = new WebSocket("ws://localhost:8000/ws");
+                const ws = new WebSocket("ws://localhost:8001/ws");
                 ws.onmessage = function(event) {
                     const data = JSON.parse(event.data);
                     document.getElementById("power-value").innerText = data.power;
